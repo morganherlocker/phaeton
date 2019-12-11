@@ -5,3 +5,18 @@
 > Plato, Timaeus, c. 360 BC
 
 ---
+
+## use
+
+```sh
+phaeton [file.osm.pbf] [options]
+```
+
+## build
+
+```sh
+mkdir build;
+cd build;
+cmake ..;
+make;
+```

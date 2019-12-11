@@ -10,3 +10,5 @@ include_directories(SYSTEM ${OSMIUM_INCLUDE_DIRS})
 
 # add the executable
 add_executable(phaeton src/phaeton.cpp)
+
+include_directories(include)
