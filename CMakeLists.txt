@@ -4,8 +4,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 # set the project name
 project(phaeton VERSION 1.0)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -13,8 +11,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # include osmium
 find_package(Osmium REQUIRED COMPONENTS io pbf)
 include_directories(SYSTEM ${OSMIUM_INCLUDE_DIRS})
-include_directories(${OSMIUM_INCLUDE_DIRS})
-
 
 # add the executable
 add_executable(phaeton src/phaeton.cpp)
