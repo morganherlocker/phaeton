@@ -1,5 +1,25 @@
 #include <iostream>
 #include <getopt.h>
+#include <osmium/io/any_input.hpp>
+#include <osmium/handler.hpp>
+
+struct CountHandler : public osmium::handler::Handler {
+    std::uint64_t nodes = 0;
+    std::uint64_t ways = 0;
+    std::uint64_t relations = 0;
+
+    void node(const osmium::Node& /*node*/) noexcept {
+      ++nodes;
+    }
+
+    void way(const osmium::Way& /*way*/) noexcept {
+      ++ways;
+    }
+
+    void relation(const osmium::Relation& /*relation*/) noexcept {
+      ++relations;
+    }
+};
 
 int main(int argc, char **argv) {
   unsigned int zoom;
@@ -31,9 +51,10 @@ int main(int argc, char **argv) {
         break;
       default:
         std::exit(1);
-
-
   	}
   }
+
+  std::cout << "END." << std::endl;
+
   std::exit(0);
 }
