@@ -15,6 +15,12 @@
 phaeton [file.osm.pbf] [options]
 ```
 
+## install
+
+```
+cargo install phaeton
+```
+
 ## build
 
 ```sh
