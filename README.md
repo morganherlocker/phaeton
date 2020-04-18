@@ -13,13 +13,13 @@
 
 ### cli
 
-```
+```sh
 phaeton [cmd] [opts]
 ```
 
 ### lib
 
-```
+```rust
 use phaeton::graph::*;
 use std::error::Error;
 
@@ -34,6 +34,17 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 ## install
 
-```
+### bin
+
+```sh
 cargo install phaeton
+```
+
+### lib
+
+Add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+osmpbf = "0.1"
 ```
