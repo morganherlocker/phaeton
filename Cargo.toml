@@ -4,7 +4,14 @@ version = "0.1.0"
 authors = ["morgan"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 osmpbf = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+
+[lib]
+name = "phaeton"
+path = "src/lib.rs"
+
+[[bin]]
+name = "phaeton"
+path = "src/bin.rs"

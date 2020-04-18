@@ -20,12 +20,3 @@ phaeton [file.osm.pbf] [options]
 ```
 cargo install phaeton
 ```
-
-## build
-
-```sh
-mkdir build;
-cd build;
-cmake ..;
-make;
-```
