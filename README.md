@@ -9,15 +9,15 @@
 
 ---
 
-## use
+## Use
 
-### cli
+### CLI
 
 ```sh
 phaeton [cmd] [opts]
 ```
 
-### lib
+### Lib
 
 ```rust
 use phaeton::graph::*;
@@ -32,15 +32,15 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 ```
 
-## install
+## Install
 
-### bin
+### CLI
 
 ```sh
 cargo install phaeton
 ```
 
-### lib
+### Lib
 
 Add this to your `Cargo.toml`:
 
