@@ -11,8 +11,25 @@
 
 ## use
 
-```sh
-phaeton [file.osm.pbf] [options]
+### cli
+
+```
+phaeton [cmd] [opts]
+```
+
+### lib
+
+```
+use phaeton::graph::*;
+use std::error::Error;
+
+fn main() -> Result<(), Box<dyn Error>> {
+  let mut graph = Graph::new();
+
+  graph.load_pbf(&std::ffi::OsString::from("./honolulu.osm.pbf"))?;
+
+  Ok(())
+}
 ```
 
 ## install
