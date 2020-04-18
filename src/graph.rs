@@ -43,11 +43,6 @@ impl Graph {
     /// use std::error::Error;
     ///
     /// fn main() -> Result<(), Box<dyn Error>> {
-    ///     let arg = std::env::args_os()
-    ///         .nth(1)
-    ///         .ok_or("need a *.osm.pbf file as argument")?;
-    ///     let mut reader = IndexedReader::from_path(&arg)?;
-    ///
     ///     let mut graph = Graph::new();
     ///
     ///     Ok(())
@@ -70,11 +65,9 @@ impl Graph {
     /// use std::error::Error;
     ///
     /// fn main() -> Result<(), Box<dyn Error>> {
-    ///     let mut reader = IndexedReader::from_path("./honolulu.osm.pbf")?;
-    ///
     ///     let mut graph = Graph::new();
     ///
-    ///     graph.load_pbf(&arg)?;
+    ///     graph.load_pbf(&std::ffi::OsString::from("./honolulu.osm.pbf"))?;
     ///
     ///     Ok(())
     /// }
