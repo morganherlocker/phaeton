@@ -48,3 +48,7 @@ Add this to your `Cargo.toml`:
 [dependencies]
 osmpbf = "0.1"
 ```
+
+## License
+
+Phaeton may be used under a permissive [MIT License](https://opensource.org/licenses/MIT).
