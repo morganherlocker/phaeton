@@ -46,7 +46,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-osmpbf = "0.1"
+phaeton = "0.1"
 ```
 
 ## License
