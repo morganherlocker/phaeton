@@ -23,7 +23,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mut graph = Graph::new();
 
-    graph.load_pbf(&arg)?;
+    graph.read_pbf(&arg)?;
 
     Ok(())
 }
