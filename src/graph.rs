@@ -84,11 +84,22 @@ impl Graph {
             },
             |element| match element {
                 Element::Way(way) => {
+                    let id = way.id();
                     let edge = Edge {
-                        id: way.id(),
+                        id: id,
                         vertices: way.refs().collect(),
                     };
                     self.edges.push(edge);
+
+                    let mut tags = Vec::new();
+                    for (key, value) in way.tags() {
+                        let tag = Tag {
+                            key: key.to_string(),
+                            value: value.to_string(),
+                        };
+                        tags.push(tag);
+                    }
+                    self.metadata.insert(id, tags);
                 }
                 Element::Node(node) => {
                     let vertex = Vertex {
